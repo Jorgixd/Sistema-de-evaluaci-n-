@@ -2,6 +2,11 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+// Mostrar errores (solo para depuración, eliminar en producción)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,10 +15,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="../assets/estilos.css">
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 
 <body>
     <div class="login-container">
@@ -28,29 +31,18 @@ if (session_status() === PHP_SESSION_NONE) {
             <button type="submit">Ingresar</button>
         </form>
 
-
-
+        <?php if (isset($_GET['error'])): ?>
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: '<?php echo htmlspecialchars($_GET["error"]); ?>',
+                    timer: 2500,
+                    showConfirmButton: false
+                });
+            </script>
+        <?php endif; ?>
     </div>
-
-    <?php if (isset($_GET['error'])): ?>
-        <div class="error-message">
-            <?php echo htmlspecialchars($_GET['error']); ?>
-        </div>
-    <?php endif; ?>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: '<?php echo htmlspecialchars($_GET['error']); ?>'
-        });
-    </script>
-
 </body>
-
-
-
 
 </html>
