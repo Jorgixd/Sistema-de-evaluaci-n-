@@ -1,0 +1,575 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding: 40px;
+  margin: 0;
+}
+
+/* Contenedor login */
+.login-container {
+  background-color: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #084cdf;
+}
+
+/* Error */
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Tabla evaluaciones */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0d6efd;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botón volver */
+.btn-volver {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn-volver:hover {
+  background-color: #5a6268;
+}
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f2f4f8;
+  color: #333;
+  padding: 40px;
+}
+
+/* Título */
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Tabla */
+table {
+  width: 90%;
+  margin: 0 auto 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #ecf0f1;
+}
+
+/* Botón */
+.btn-volver {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #27ae60;
+}
+
+/* Formulario */
+.formulario-evaluacion {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-evaluacion label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.formulario-evaluacion input,
+.formulario-evaluacion select,
+.formulario-evaluacion textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn-enviar {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #1f618d;
+}
+
+/* Dashboard */
+.dashboard-container {
+  text-align: center;
+  margin-top: 80px;
+  font-family: Arial, sans-serif;
+}
+
+.menu-dashboard {
+  margin-top: 30px;
+}
+
+.btn-menu {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-menu:hover {
+  background-color: #2c80b4;
+}
+
+.logout {
+  background-color: #e74c3c;
+}
+
+.logout:hover {
+  background-color: #c0392b;
+}
+
+.top-bar {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+}
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f7;
+  padding: 20px;
+}
+
+h3 {
+  color: #2c3e50;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #34495e;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.top-bar {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #34495e;
+  color: white;
+}
+
+nav a {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  background-color: #1abc9c;
+  transform: scale(1.05);
+}
+
+.btn-volver {
+  display: inline-block;
+  background-color: #2c3e50;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-volver:hover {
+  background-color: #1a242f;
+}
+
+input#buscador {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* === ESTILO GENERAL === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h3,
+h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* === FORMULARIO DE EVALUACIÓN === */
+form.formulario-evaluacion {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+form select,
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  background: #fafafa;
+}
+
+fieldset legend {
+  font-weight: bold;
+  color: #34495e;
+}
+
+fieldset p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+fieldset label {
+  margin-right: 15px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* === BOTONES === */
+button.btn-enviar,
+a.btn-volver {
+  background: #2980b9;
+  color: #fff;
+  padding: 12px 22px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.btn-enviar:hover,
+a.btn-volver:hover {
+  background: #1c638f;
+}
+
+/* === EVALUACIONES MOSTRADAS === */
+.evaluacion-box {
+  background: #ffffff;
+  border-left: 6px solid #3498db;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.evaluacion-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.evaluacion-box li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  border-left: 3px solid #bdc3c7;
+}
+
+hr {
+  margin-top: 20px;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+/* === HEADER INCLUDES (opcional si tienes header.php) === */
+header {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+header a {
+  color: #ecf0f1;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  margin-top: 15px;
+  color: #e74c3c;
+  font-weight: bold;
+  background: #fdecea;
+  border-left: 5px solid #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*para ocultarlo   */
+
+.dashboard-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+  max-width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  overflow-x: auto; /* Habilita scroll horizontal */
+  white-space: nowrap; /* Fuerza contenido en línea */
+}
+
+/* Mostrar los items de forma horizontal */
+.dashboard-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: inline-flex; /* Cambia de columna a fila horizontal */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Asegúrate que los items no se rompan */
+.dashboard-container li {
+  margin: 0; /* ya no es necesario margen vertical */
+  white-space: normal;
+}
+
+/* Opcional: establece un ancho mínimo para cada botón */
+.dashboard-container a {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 160px; /* Cada enlace ocupará un espacio mínimo */
+}
+
+.dashboard-container a:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
