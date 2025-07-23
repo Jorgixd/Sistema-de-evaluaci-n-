@@ -1,30 +1,22 @@
 <?php
-class Database {
-    // --- CONFIGURACIÓN DE CONEXIÓN ---
-    private $host = 'dpg-d20edt7gi27c73ch5sbg-a';           // Host de tu base de datos Render
-    private $db_name = 'cevaluacion';                       // Nombre de la base de datos
-    private $username = 'root';                             // Usuario PostgreSQL
-    private $password = '2mapSsNT7OsiBwBnXousZIZVsEvoYl3H'; // Contraseña PostgreSQL
-    private $port = '5432';                                 // Puerto PostgreSQL
-    // ----------------------------------
+// config/db.php
 
-    private $conn;
+$host = 'dpg-d20edt7gi27c73ch5sbg-a'; // Reemplaza con el host real que te da Render
+$port = '5432';
+$db   = 'cevaluacion';
+$user = 'root';
+$pass = '2mapSsNT7OsiBwBnXousZIZVsEvoYl3H';
 
-    public function connect() {
-        if ($this->conn) {
-            return $this->conn;
-        }
+$dsn = "pgsql:host=$host;port=$port;dbname=$db";
 
-        $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->db_name}";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
-        try {
-            $this->conn = new PDO($dsn, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $e) {
-            die('Error de Conexión: ' . $e->getMessage());
-        }
-
-        return $this->conn;
-    }
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
 }
-?>
