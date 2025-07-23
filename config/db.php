@@ -1,12 +1,12 @@
 <?php
 class Database {
-    // --- MODIFICA ESTOS DATOS CON LOS TUYOS ---
-    private $host = 'dpg-d20edt7gi27c73ch5sbg-a';          // Host de PostgreSQL
-    private $db_name = 'cevaluacion';     // Nombre de tu base de datos
-    private $username = 'root';       // Tu usuario de PostgreSQL
-    private  $password = '2mapSsNT7OsiBwBnXousZIZVsEvoYl3H';  // Tu contraseña de PostgreSQL
-    private $port = '5432';               // Puerto (usualmente 5432)
-    // -----------------------------------------
+    // --- CONFIGURACIÓN DE CONEXIÓN ---
+    private $host = 'dpg-d20edt7gi27c73ch5sbg-a';           // Host de tu base de datos Render
+    private $db_name = 'cevaluacion';                       // Nombre de la base de datos
+    private $username = 'root';                             // Usuario PostgreSQL
+    private $password = '2mapSsNT7OsiBwBnXousZIZVsEvoYl3H'; // Contraseña PostgreSQL
+    private $port = '5432';                                 // Puerto PostgreSQL
+    // ----------------------------------
 
     private $conn;
 
