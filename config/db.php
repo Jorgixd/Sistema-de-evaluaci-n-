@@ -1,11 +1,11 @@
 <?php
 // config/db.php
 
-$host = 'dpg-d20edt7gi27c73ch5sbg-a'; // Reemplaza con el host real que te da Render
+$host = 'dpg-d20girumcj7s73b5gno0-a.oregon-postgres.render.com'; // Reemplaza con el host real que te da Render
 $port = '5432';
-$db   = 'cevaluacion';
-$user = 'root';
-$pass = '2mapSsNT7OsiBwBnXousZIZVsEvoYl3H';
+$db   = 'siswebeva';
+$user = 'siswebeva_user';
+$pass = 'br2muyJBP6PRy8VETcmGfQrkS2YdTk88';
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$db";
 
