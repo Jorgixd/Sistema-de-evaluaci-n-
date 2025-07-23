@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$dbname = 'Cevaluacion';
-$user = 'postgres';
-$password = '123456';
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
 
 try {
     $pdo = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $user, $password);
